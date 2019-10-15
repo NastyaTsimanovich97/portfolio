@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Yeseva+One&display=swap&subset=latin-ext" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i&display=swap" rel="stylesheet">
+
+     <link rel='stylesheet' href='./dist/style.css'>
+    <title>Portfolio</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <img class="person-image" src="./src/assets/photo.jpg" alt="person-image">
+            <div class="personal-information">
+                <h1 class="person-name">Nastya Tsimanovich</h1>
+                <ul class="social-links">
+                    <li class="header__list social-links__github"><a href="https://github.com/NastyaTsimanovich97" class="header__href github__href" target="_blank">GitHub</a></li>
+                    <li class="header__list social-links__telegram"><a href="https://t.me/nastya_tsimanovich" class="header__href telegram__href" target="_blank">Telegram</a></li>
+                    <li class="header__list social-links__skype"><a href="tel:+375299664215" class="header__href skype__href" target="_blank">Skype</a></li>
+                </ul>
+            </div>
+        </header>
+        <main>
+            <section class="education">
+              <button type="button" class="collapsible ">
+                <p class="collapsible__education-text">Education</p> 
+                <img class="collapsible__education-img" src="./src/assets/angle-arrow-down.svg" alt="arrow down">
+              </button>
+              <div class="content">
+                  <ul class="education-list">
+                      <li class="education-list__university"><b>2015 - 2019</b> Belarusian State University of Informatics and Radioelectronics.<br> Faculty of Information Technologies and Control</li>
+                      <li class="education-list__rs-school"><b>February 2019 - May 2019</b> Rolling-Scopes-School</li>
+                      <li class="education-list__master-degree"><b>September 2019 - present</b> Belarusian State University of Informatics and Radioelectronics (master degree)</li>
+                      <li class="education-list__rs-now"><b>September 2019 - present</b> Rolling-Scopes-School</li>
+                  </ul>
+              </div>
+            </section>
+            <section class="projects">
+              <div class="projects-header">
+                <p class="project-header__text">Projects</p>
+              </div>
+              <div class="slider-container">
+                  <section class="slide-project container__project1">
+                    <h6 class="container__slide__header project1__header">Repair Design Project</h6>
+                  </section>
+                  <section class="slide-project container__project2">
+                    <h6 class="container__slide__header project2__header">Theyalow</h6>
+                  </section>
+              </div>
+            </section>
+        </main>
+    </div>
+   <script type="text/javascript" src="dist/bundle.js"></script>
+</body>
+</html>
