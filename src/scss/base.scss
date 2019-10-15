@@ -124,5 +124,66 @@ $tablet: 768px;
     font-family: $Lato;
     color: black;
 }
+.slider-container{
+    position: relative;
+    max-width: 200%;
+}
+.slider__next-img{
+    width: 4vw;
+}
+.slider__prev-img{
+    width: 4vw;
+    transform: rotate(180deg);
+}
+.slider__next,
+.slider__prev{
+    cursor: pointer;
+}
+
+
+.slide-project{
+    display: flex;
+}
+.slide__header{
+    font-size: 23px;
+    line-height: 53px;
+    font-family: $YesevaOne;
+    color: rgb(57, 57, 57);
+}
+.slide__description{   
+    margin-top: 3vw;
+    margin-left: 3vw;
+}
+.slide__list{
+    margin-left: 3vw;
+    font-size: 20px;
+    line-height: 53px;
+    font-family: $Lato;
+    color: rgb(57, 57, 57);
+}
+.img__repair-design{
+    width: 50vw;
+    height: 70vw;
+    margin-top: 3vw;
+    margin-left: 3vw;
+}
+.slide__description__button{
+    display: flex;
+    align-items: center;
+    width: 20vw;
+    height: 7vw;
+    margin-top: 14vw;
+    margin-left: 13vw;
+}
+.slide__description__button-text{
+    width: 15vw;
+    font-size: 18px;
+    line-height: 20px;
+    font-family: $Lato;
+    color: rgb(57, 57, 57);
+}
+.slide__description__button-img{
+    width: 3vw;
+}
 
 
