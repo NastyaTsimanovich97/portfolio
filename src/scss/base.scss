@@ -14,37 +14,53 @@ $tablet: 768px;
 .header{
     display: flex;
     width: 100%;
-    height: 200px;
+    height: 20vw;
     justify-content: center;
     align-items: center;
+    @media screen and (max-width: $mobile){
+        height: 40vw;
+    }
 }
-
-
 .person-image{
-    width: 180px;
-    height: 180px;
+    width: 15vw;
+    height: 15vw;
     border-radius: 50%;
+    @media screen and (max-width: $mobile){
+        width: 30vw;
+        height: 30vw;
+    }
 }
 .personal-information{
     margin-left: 3vw;
     text-align: center;
+    @media screen and (max-width: $mobile){
+        margin-left: 1vw;
+    }
 }
 .person-name{
     font-style: normal;
     font-weight: normal;
-    font-size: 40px;
-    line-height: 53px;
+    font-size: 3vw;
+    line-height: 4vw;
     text-transform: uppercase;
     font-family: $YesevaOne;
+    @media screen and (max-width: $mobile){
+        font-size: 5.8vw;
+        line-height: 10vw;
+    }
 }
 .header__list{
     display: inline;
-    margin-right : 2vw;
+    margin-right: 2vw;
     list-style: none;
-    font-size: 20px;
-    line-height: 53px;
+    font-size: 1.4vw;
+    line-height: 3vw;
     text-transform: uppercase;
     font-family: $Lato;
+    @media screen and (max-width: $mobile){
+        font-size: 3.8vw;
+        line-height: 6vw;
+    }
 }
 .header__href{
     text-decoration: none;
@@ -55,6 +71,8 @@ $tablet: 768px;
 }
 
 .education{
+    width: 93vw;
+    margin: 0 auto;
     margin-top: 3vw;
     margin-bottom: 2vw;
 }
@@ -62,17 +80,18 @@ $tablet: 768px;
     display: flex;
     align-items: center;
     width: 90vw;
-    height: 90.8px;
+    height: 5vw;
     margin: 0 auto;
-    padding: .75rem 1.25rem;
     border-radius: 32px;
     border: 1px solid rgba(0,0,0,0.125);
     background-color: rgba(0, 0, 0, 0.034);
     cursor: pointer;
     outline: none;
-    padding: 18px;
     &:hover{
         background-color: rgba(0, 0, 0, 0.024);
+    }
+    @media screen and (max-width: $mobile){
+        height: 11vw;
     }
 }
 .active{
@@ -80,24 +99,34 @@ $tablet: 768px;
   }
 .collapsible__education-text{
     margin-left: 6.8%;
-    font-size: 25px;
-    line-height: 53px;
+    font-size: 2vw;
+    line-height: 2vw;
     font-family: $Lato;
     color: black;
+    @media screen and (max-width: $mobile){
+        font-size: 4vw;
+        line-height: 6vw;
+    }
 }
 .collapsible__education-img{
-    width: 25px;
-    margin-left: 4vw;
+    width: 1.5vw;
+    margin-left: 2vw;
+    @media screen and (max-width: $mobile){
+        width: 3vw;
+    }
 }
 .education-list{
     margin-left: 12%;
-    font-size: 20px;
-    line-height: 53px;
+    font-size: 1.4vw;
+    line-height: 3.5vw;
     font-family: $Lato;
     color: rgb(57, 57, 57);
+    @media screen and (max-width: $mobile){
+        font-size: 4vw;
+        line-height: 6vw;
+    }
 }
 .content{
-    padding: 0 18px;
     overflow: hidden;
     max-height: 0;
     transition: max-height 0.2s ease-out;
@@ -111,61 +140,96 @@ $tablet: 768px;
 .projects-header{
     display: flex;
     align-items: center;
-    height: 90.8px;
+    height: 5vw;
     margin: 0 auto;
     border-radius: 32px;
     border: 1px solid rgba(0,0,0,0.125);
     background-color: rgba(0, 0, 0, 0.034);
+    @media screen and (max-width: $mobile){
+        height: 10vw;
+    }
 }
 .project-header__text{
-    margin-left: 8%;
-    font-size: 25px;
-    line-height: 53px;
+    margin-left: 7%;
+    font-size: 2vw;
+    line-height: 2vw;
     font-family: $Lato;
     color: black;
+    @media screen and (max-width: $mobile){
+        font-size: 4vw;
+        line-height: 6vw;
+    }
 }
-.slider-container{
-    position: relative;
-    max-width: 200%;
-}
-.slider__next-img{
-    width: 4vw;
-}
-.slider__prev-img{
-    width: 4vw;
-    transform: rotate(180deg);
-}
-.slider__next,
-.slider__prev{
-    cursor: pointer;
-}
+// .slider-container{
+//     --n:1;
+//     display: flex;
+//     align-items: center;
+//     width: 100%;
+// }
+// .slide-project{
+//     min-width: 100%;
+//     width: 100%;
+// }
+// .slider__next-img{
+//     width: 4vw;
+// }
+// .slider__prev-img{
+//     width: 4vw;
+//     transform: rotate(180deg);
+// }
+// .slider__next,
+// .slider__prev{
+//     cursor: pointer;
+// }
 
 
 .slide-project{
     display: flex;
-}
-.slide__header{
-    font-size: 23px;
-    line-height: 53px;
-    font-family: $YesevaOne;
-    color: rgb(57, 57, 57);
+    @media screen and (max-width: $mobile){
+        flex-direction: column;
+        align-items: center;
+    }
 }
 .slide__description{   
     margin-top: 3vw;
     margin-left: 3vw;
+    @media screen and (max-width: $mobile){
+        overflow: hidden;
+        max-height: 0;
+        transition: max-height 0.2s ease-out;
+    }
+}
+.slide__header{
+    font-size: 1.5vw;
+    line-height: 3vw;
+    font-family: $YesevaOne;
+    color: rgb(57, 57, 57);
+    @media screen and (max-width: $mobile){
+        font-size: 5vw;
+        line-height: 8vw;
+    }
 }
 .slide__list{
     margin-left: 3vw;
-    font-size: 20px;
-    line-height: 53px;
+    font-size: 1.5vw;
+    line-height: 3vw;
     font-family: $Lato;
     color: rgb(57, 57, 57);
+    @media screen and (max-width: $mobile){
+        margin-left: 5vw;
+        font-size: 4vw;
+        line-height: 8vw;
+    }
 }
-.img__repair-design{
+.slide__img{
     width: 50vw;
     height: 70vw;
     margin-top: 3vw;
     margin-left: 3vw;
+    @media screen and (max-width: $mobile){
+        width: 87vw;
+        height: 127vw;
+    }
 }
 .slide__description__button{
     display: flex;
@@ -174,16 +238,58 @@ $tablet: 768px;
     height: 7vw;
     margin-top: 14vw;
     margin-left: 13vw;
+    @media screen and (max-width: $mobile){
+        width: 40vw;
+        height: 12vw;
+        margin-top: 5vw;
+    }
 }
 .slide__description__button-text{
     width: 15vw;
-    font-size: 18px;
-    line-height: 20px;
+    font-size: 1.4vw;
+    line-height: 1.8vw;
     font-family: $Lato;
     color: rgb(57, 57, 57);
+    @media screen and (max-width: $mobile){
+        width: 40vw;
+        font-size: 3.4vw;
+        line-height: 3.8vw;
+    }
 }
 .slide__description__button-img{
     width: 3vw;
+    @media screen and (max-width: $mobile){
+        display: none;
+    }
 }
-
+.slide__description__button-img__down{
+    display: none;
+    @media screen and (max-width: $mobile){
+        display: inline;
+        width: 4vw;
+        margin-left: 2vw;
+    }
+}
+.description__mobile{
+    display: none;
+    @media screen and (max-width: $mobile){
+        display: inline;
+        width: 90vw;
+        height: 20vw;
+        margin: 3vw auto;
+        border: 0;
+        border-bottom: 2px solid rgba(0, 0, 0, 0.034);
+        background-color: rgba(255, 255, 255, 1);
+        cursor: pointer;
+        font-size: 4.5vw;
+        line-height: 9vw;
+        font-family: $Lato;
+        color: black;
+        text-align: center;
+    }
+}
+.description__mobile-img{
+    width: 4vw;
+    margin-left: 2vw;
+}
 
