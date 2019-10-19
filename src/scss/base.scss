@@ -21,6 +21,10 @@ $tablet: 768px;
         height: 40vw;
     }
 }
+.main{
+    display: flex;
+    flex-direction: column;
+}
 .person-image{
     width: 15vw;
     height: 15vw;
@@ -160,31 +164,11 @@ $tablet: 768px;
         line-height: 6vw;
     }
 }
-// .slider-container{
-//     --n:1;
-//     display: flex;
-//     align-items: center;
-//     width: 100%;
-// }
-// .slide-project{
-//     min-width: 100%;
-//     width: 100%;
-// }
-// .slider__next-img{
-//     width: 4vw;
-// }
-// .slider__prev-img{
-//     width: 4vw;
-//     transform: rotate(180deg);
-// }
-// .slider__next,
-// .slider__prev{
-//     cursor: pointer;
-// }
-
 
 .slide-project{
     display: flex;
+    // width: 90vw;
+    margin: 0 auto;
     @media screen and (max-width: $mobile){
         flex-direction: column;
         align-items: center;
@@ -293,3 +277,91 @@ $tablet: 768px;
     margin-left: 2vw;
 }
 
+.carousel{
+    //  position: relative;
+    //  top: 125%;
+    //  left: 50%;
+     width: 100%;
+    //  transform: translate(-50%,-50%);
+    //  @media screen and (max-width: $mobile){
+    //     position: relative;
+    //     top: 85%;
+    //  }
+}
+.carousel__item{
+    display: none;
+    position: relative;
+    height: 1060px;
+    margin: 0 auto;
+    animation: 0.5s ease-in-out;
+}
+.active-slide,
+.next-slide{
+    display: block;
+}
+.next-slide{
+    position: absolute;
+    top: 35.2vw;
+    width: 100%;
+    height: 1050px;
+    @media screen and (max-width: $mobile){
+        top: 37.9%;
+    }
+}
+.control{
+    position: absolute;
+    top: 125%;
+    bottom: 0;
+    width: 4vw;
+    cursor: pointer;
+    @media screen and (max-width: $mobile){
+        display: none;
+    }
+}
+.control.left{
+    left: 0;
+    right: auto;
+}
+.control.right{
+    right: 0;
+    left: auto;
+}
+.arrow{
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
+.to-left{
+    animation-name: left;
+}
+.to-right{
+    animation-name: right;
+    animation-direction: reverse;
+}
+.from-left{
+    animation-name: left;
+    animation-direction: reverse;
+}
+.from-right{
+    animation-name: right;
+}
+
+@keyframes left{
+    from{
+        left:0;
+    }
+    to{
+        left:-100%;
+    }
+}
+@keyframes right{
+    from{
+        left:100%;
+    }
+    to{
+        left:0;
+    }
+}
