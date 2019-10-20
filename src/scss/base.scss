@@ -381,8 +381,8 @@ $tablet: 768px;
 .button__mobile,
 .button__desktop,
 .button__back,
-.theyallow-button__mobile,
-.theyallow-button__desktop{
+.theyalow-button__mobile,
+.theyalow-button__desktop{
     position: fixed;
     width: 80px;
     height: 40px;
@@ -392,11 +392,11 @@ $tablet: 768px;
     color: white;
     cursor: pointer;
 }
-.theyallow-button__mobile{
+.theyalow-button__mobile{
     top: 70%;
     left: 5%;
 }
-.theyallow-button__desktop{
+.theyalow-button__desktop{
     top: 77%;
     left: 5%;
 }
