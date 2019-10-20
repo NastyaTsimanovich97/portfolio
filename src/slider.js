@@ -93,20 +93,12 @@ const swipedetect=(el)=>{
     });
 
     surface.addEventListener('touchstart', function(e){
-    //     if(e.target.classList.contains('description__mobile')){
-    //         const mobileCollapse=document.getElementsByClassName("description__mobile");
-    //         for (let i = 0; i < mobileCollapse.length; i++) {
-    //         mobileCollapse[i].addEventListener("touchstart", function() {
-    //             this.classList.toggle("active");
-    //             let content = this.nextElementSibling;
-    //             if (content.style.maxHeight){
-    //                 content.style.maxHeight = null;
-    //             } else {
-    //             content.style.maxHeight = content.scrollHeight + "px";
-    //             } 
-    //         });
-    //     }
-    // }
+        if(e.target.classList.contains('slide__img')){
+        let href=document.getElementsByClassName("project__href");
+           console.log(href)
+           isEnabled=true;
+        }
+
         if (e.target.classList.contains('arrow') || e.target.classList.contains('control')){
             if (e.target.classList.contains('left')){
                 if(isEnabled){
@@ -117,7 +109,7 @@ const swipedetect=(el)=>{
             if (e.target.classList.contains('arrow') || e.target.classList.contains('control')){
                 if (e.target.classList.contains('right')){
                     if(isEnabled){
-                        previousItem(currentItem);
+                        nextItem(currentItem);
                     }
                 }
         }
@@ -155,3 +147,4 @@ const swipedetect=(el)=>{
 }
 let el = document.querySelector('.carousel');
 swipedetect(el);
+

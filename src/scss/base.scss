@@ -1,6 +1,6 @@
 $YesevaOne :'Yeseva One',"Comic Sans MS", cursive;
 $Lato :'Lato', Arial, sans-serif;
-$mobile: 400px;
+$mobile: 500px;
 $tablet: 768px;
 
 *{
@@ -17,13 +17,15 @@ $tablet: 768px;
     height: 20vw;
     justify-content: center;
     align-items: center;
+    background-color: rgba(234, 255, 44, 0.136);
     @media screen and (max-width: $mobile){
         height: 40vw;
     }
 }
-.main{
+.main-profile{
     display: flex;
     flex-direction: column;
+    background-color: rgba(234, 255, 44, 0.136);
 }
 .person-image{
     width: 15vw;
@@ -287,6 +289,9 @@ $tablet: 768px;
     //     position: relative;
     //     top: 85%;
     //  }
+    @media screen and (max-width: $mobile){
+        height: 170vw;
+    }
 }
 .carousel__item{
     display: none;
@@ -294,18 +299,22 @@ $tablet: 768px;
     height: 1060px;
     margin: 0 auto;
     animation: 0.5s ease-in-out;
+    @media screen and (max-width: $mobile){
+        height: 885px;
+    }
 }
 .active-slide,
 .next-slide{
     display: block;
+    
 }
 .next-slide{
     position: absolute;
     top: 35.2vw;
     width: 100%;
-    height: 1050px;
+    height: 1060px;
     @media screen and (max-width: $mobile){
-        top: 37.9%;
+        top: 50.4%;
     }
 }
 .control{
@@ -364,4 +373,41 @@ $tablet: 768px;
     to{
         left:0;
     }
+}
+
+.button{
+    display: flex;
+}
+.button__mobile,
+.button__desktop,
+.button__back{
+    position: fixed;
+    width: 80px;
+    height: 40px;
+    border: 0;
+    background: rgba(0, 0, 0, 0.3);
+    font-family: $YesevaOne;
+    color: white;
+    cursor: pointer;
+}
+.button__mobile{
+    top: 70%;
+    left: 5%;
+}
+.button__desktop{
+    top: 77%;
+    left: 5%;
+}
+.button__back{
+    top: 7%;
+    left: 5%;
+}
+.main{
+    width: 100%;
+    background-color: rgba(234, 255, 44, 0.136);
+}
+.iframe-container{
+    display: none;
+    width: 38vw;
+    height: 1000px;
 }
