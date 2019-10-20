@@ -1,4 +1,8 @@
 let el=document.querySelector('iframe');
+let bodyContainer=document.querySelector('body');
+let widthBody=getComputedStyle(bodyContainer);
+console.log(widthBody.width)
+el.style.width=widthBody.width;
 
 document.querySelector('.theyalow-button__mobile').addEventListener('click',function(){
     let buttonMobile= document.querySelector('.theyalow-button__mobile')
@@ -12,8 +16,9 @@ document.querySelector('.theyalow-button__mobile').addEventListener('click',func
     
     main.style=`display:flex;
                 flex-direction:row;`;
+    
     container.style=`display: inline;
-                        width: 29vw`;
+                        width: 29vw;`;
     buttonMobile.style.top='77%';
     buttonDesktop.style.top='70%';
     console.log(buttonMobile)

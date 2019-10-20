@@ -64,6 +64,23 @@ const swipedetect=(el)=>{
 
     let allowedTime = 300;
 
+    function newDoc() {
+        window.location.assign("https://www.w3schools.com")
+    }
+
+    surface.addEventListener('touch',function(e){
+        console.log(e.target.classList)
+        if(e.target.classList.contains('slide__img') && distX==0){
+            let href = document.createElement('a');
+            href.setAttribute('href','./repair.html') ;
+            let node=document.querySelector('.slide__img');
+            node.before(href);
+            console.log(node);
+            window.location.pathname='../repair.html';
+            newDoc();
+        }
+    })
+
     surface.addEventListener('mousedown', function(e){
         startX = e.pageX;
         startY = e.pageY;
@@ -93,11 +110,7 @@ const swipedetect=(el)=>{
     });
 
     surface.addEventListener('touchstart', function(e){
-        if(e.target.classList.contains('slide__img')){
-        let href=document.getElementsByClassName("project__href");
-           console.log(href)
-           isEnabled=true;
-        }
+        
 
         if (e.target.classList.contains('arrow') || e.target.classList.contains('control')){
             if (e.target.classList.contains('left')){
@@ -123,6 +136,7 @@ const swipedetect=(el)=>{
         e.preventDefault();
     });
     surface.addEventListener('touchend', function(e){
+
         let touchObj = e.changedTouches[0];
         distX = touchObj.pageX - startX;
         distY = touchObj.pageY - startY;
@@ -142,6 +156,15 @@ const swipedetect=(el)=>{
             }
         }
         e.preventDefault();
+
+        console.log(e.target.classList)
+        if(e.target.classList.contains('slide__img') && distX==0){
+            let href = document.createElement('a');
+            href.setAttribute('href','./repair.html') ;
+            let node=document.querySelector('.slide__img');
+            node.before(href);
+            console.log(node)
+        }
     });
 
 }

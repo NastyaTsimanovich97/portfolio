@@ -1,42 +1,16 @@
 let el=document.querySelector('iframe');
+let bodyContainer=document.querySelector('body');
+let widthBody=getComputedStyle(bodyContainer);
+console.log(widthBody.width)
+el.style.width=widthBody.width;
 
-// document.querySelector('.theyalow-button__mobile').addEventListener('click',function(){
-//     let buttonMobile= document.querySelector('.theyalow-button__mobile')
-//     let buttonDesktop= document.querySelector('.theyalow-button__desktop')
-//     let container= document.querySelector('.iframe-container')
-//     let main= document.querySelector('.main')
- 
-
-//     el.style.width='650px';
-//     el.style.height='658px';
-    
-//     main.style=`display:flex;
-//                 flex-direction:row;`;
-//     container.style=`display: inline;
-//                         width: 29vw`;
-//     buttonMobile.style.top='77%';
-//     buttonDesktop.style.top='70%';
-//     console.log(buttonMobile)
-//     console.log(el)
-//  });
-//  document.querySelector('.theyalow-button__desktop').addEventListener('click',function(){
-//     let container= document.querySelector('.iframe-container')
-//     let buttonMobile= document.querySelector('.theyalow-button__mobile')
-//     let buttonDesktop= document.querySelector('.theyalow-button__desktop')
-//     el.style.width='1440px'
-
-//     container.style=`display:none`;
-//     buttonMobile.style.top='70%';
-//     buttonDesktop.style.top='77%';
-//      console.log(el)
-//  });
 
 document.querySelector('.button__mobile').addEventListener('click',function(){
    let buttonMobile= document.querySelector('.button__mobile')
    let buttonDesktop= document.querySelector('.button__desktop')
    let container= document.querySelector('.iframe-container')
    let main= document.querySelector('.main')
-
+   
 //    let topDesktop=getComputedStyle(buttonDesktop);
 //    let topMobile=getComputedStyle(buttonMobile);
    el.style.width='375px';
@@ -61,3 +35,4 @@ document.querySelector('.button__desktop').addEventListener('click',function(){
     buttonDesktop.style.top='77%';
      console.log(el)
  });
+
